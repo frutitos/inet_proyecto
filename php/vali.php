@@ -32,19 +32,25 @@
         $email = $_POST["email"];
         $pass = $_POST["password"];
 
-        // Consultar la base de datos para verificar el usuario
-        $sql = "SELECT * FROM usuarios WHERE email = '$email' AND pass = '$pass'";
+        // Consultar la base de datos para obtener el usuario y el hash de la contraseña
+        $sql = "SELECT id, nombre, apellido, pass FROM usuarios WHERE email = '$email'";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) == 1) {
-            $row = mysqli_fetch_row($result);
+            $row = mysqli_fetch_assoc($result);
 
-            $_SESSION['email'] = $email;
-            $_SESSION['user_id'] = $row[0];
-            $_SESSION['nombre'] = $row[1];
-            $_SESSION['apellido'] = $row[2];
+            // Verificar la contraseña ingresada con el hash almacenado
+            if (password_verify($pass, $row['pass'])) {
+                // Contraseña correcta, iniciar sesión
+                $_SESSION['email'] = $email;
+                $_SESSION['user_id'] = $row['id'];
+                $_SESSION['nombre'] = $row['nombre'];
+                $_SESSION['apellido'] = $row['apellido'];
 
-            $login_success = true;
+                $login_success = true;
+            } else {
+                $error_message = "Correo electrónico o contraseña incorrectos.";
+            }
         } else {
             $error_message = "Correo electrónico o contraseña incorrectos.";
         }
@@ -62,11 +68,11 @@
                 }, 3000); // Redirigir después de 3 segundos
             </script>
         <?php else : ?>
-            <p class="error-message">ERROR, VOLVIENDO AL LOGUEO</p>
+            <p class="error-message"><?php echo $error_message; ?></p>
             <script>
                 setTimeout(function() {
-                    window.location.href = 'chau.php'; // Cambiar a la página de inicio correspondiente
-                }, 1000); // Redirigir después de 1 segundo
+                    window.location.href = '../index.php'; // Redirigir después de 1 segundo
+                }, 1000);
             </script>
         <?php endif; ?>
     </div>
