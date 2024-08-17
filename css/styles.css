@@ -6,7 +6,7 @@
     font-family: 'Montserrat',sans-serif;
 }
 nav{
-    background: #151515;
+    background: #D8D8D8;
     padding: 5px 40px;
 }
 nav ul{
@@ -96,9 +96,17 @@ nav ul li.btn.hide i:before{
     width: 10vh;
     height: 10vh;
 }
+.user_icon{
+    width: 100%;
+    height: 10vh;
+}
 .pie{
     background-color: #ff0000;
     width: 100%;
     display: flex;
     margin-top: 50%;
+}
+.splide__slide img {
+    width: 100%;
+    height: auto;
 }
