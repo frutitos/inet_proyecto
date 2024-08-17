@@ -48,7 +48,7 @@
                     echo "<script>
                             document.getElementById('success-message').style.display = 'block';
                             setTimeout(function(){
-                                window.location.href = 'inicio.php';
+                                window.location.href = 'home.php';
                             }, 3000); // 3 segundos de espera
                             </script>";
                 } else {

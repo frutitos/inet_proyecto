@@ -64,7 +64,7 @@
             <p class="success-message">Inicio de sesión exitoso. Redirigiendo...</p>
             <script>
                 setTimeout(function() {
-                    window.location.href = 'inicio.php'; // Cambiar a la página de inicio correspondiente
+                    window.location.href = 'home.php'; // Cambiar a la página de inicio correspondiente
                 }, 3000); // Redirigir después de 3 segundos
             </script>
         <?php else : ?>
