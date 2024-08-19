@@ -9,85 +9,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../js/script.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li class="logo"><img class="logo_header" src="../img/zzoro.gif"></li>
+                <li class="logo"><a href="home.php"><img class="logo_header" src="../media/logo2.png"></a></li>
                 <li class="items"><a href="home.php">Inicio</a></li>
                 <li class="items"><a href="catalogo.php">Catalogo</a></li>
                 <li class="items"><a href="#">Feedback</a></li>
-                <li class="items"><a href="catalogo.php"><img class="user_icon" src="../img/usericon1.png" alt=""></a></li>
+                <li class="items"><a href="catalogo.php"><img class="user_icon" src="../media/usericon1.png" alt=""></a></li>
                 <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
             </ul>
         </nav>
     </header>
-    <!-- Carousel wrapper -->
-    <div
-        id="carouselVideoExample"
-        data-mdb-carousel-init
-        class="carousel slide carousel-fade"
-        data-mdb-ride="carousel"
-    >
-        <!-- Inner -->
-        <div class="carousel-inner">
-            <!-- Single item -->
-            <div class="carousel-item active">
-                <video class="img-fluid" autoplay loop muted>
-                    <source src="../img/rugby.mp4" type="video/mp4" />
-                </video>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </div>
-            </div>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
 
-            <!-- Single item -->
-            <div class="carousel-item">
-                <video class="img-fluid" autoplay loop muted>
-                    <source src="../img/fulbo.mp4" type="video/mp4" />
-                </video>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-
-            <!-- Single item -->
-            <div class="carousel-item">
-                <video class="img-fluid" autoplay loop muted>
-                    <source src="../img/basket.mp4" type="video/mp4"/>
-                </video>
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-            </div>
-        </div>
-        <!-- Inner -->
-
-        <!-- Controls (dentro del carrusel) -->
-        <button
-            class="carousel-control-prev"
-            type="button"
-            data-mdb-target="#carouselVideoExample"
-            data-mdb-slide="prev"
-        >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-            class="carousel-control-next"
-            type="button"
-            data-mdb-target="#carouselVideoExample"
-            data-mdb-slide="next"
-        >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="../media/zzoro.gif" style="width:100%">
+    <div class="text">Caption Text</div>
     </div>
-    <!-- Carousel wrapper -->
+
+    <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="img2.jpg" style="width:100%">
+    <div class="text">Caption Two</div>
+    </div>
+
+    <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img3.jpg" style="width:100%">
+    <div class="text">Caption Three</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
     <footer>
         <div class="pie">
             <p>hola</p>
