@@ -1,49 +1,86 @@
 <!DOCTYPE html>
-
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../js/script.js">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="../css/catalogo.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li class="logo"><img class="logo_header" src="../media/logo2.png"></li>
-                <li class="items"><a href="home.php">Inicio</a></li>
-                <li class="items"><a href="catalogo.php">Catalogo</a></li>
-                <li class="items"><a href="#">Feedback</a></li>
-                <li class="items"><a href="catalogo.php"><img class="user_icon" src="../media/usericon1.png" alt=""></a></li>
-                <li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <footer>
-        <div class="pie">
-            <p>hola</p>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo2.png" alt="Logo">
         </div>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#asistencia">Asistencia al Cliente</a>
+        </div>
+        <div class="user-icon">
+            <img src="img/usericon1.png" alt="Usuario">
+        </div>
+    </nav>
+    <div class="cart-icon">
+        <a href="#carrito"><ion-icon name="cart-outline"></ion-icon></a>
+    </div>
+
+    <!-- Filtro del catálogo debajo de la barra de navegación -->
+    <aside class="sidebar">
+        <h3>Filtrar por:</h3>
+        <ul>
+            <li><input type="checkbox"> Ropa</li>
+            <li><input type="checkbox"> Calzado</li>
+            <li><input type="checkbox"> Accesorios</li>
+            <li><input type="checkbox"> Ofertas</li>
+        </ul>
+    </aside>
+
+    <!-- Sección de productos -->
+    <section class="products">
+        <h2>Productos Destacados</h2>
+        <div class="product-list">
+            <div class="product">
+                <ion-icon name="basketball-outline"></ion-icon>
+                <p>$100</p>
+            </div>
+            <div class="product">
+                <ion-icon name="tennisball-outline"></ion-icon>
+                <p>$150</p>
+            </div>
+            <div class="product">
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <ion-icon name="football-outline"></ion-icon>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="producto3.jpg" alt="Producto 3">
+                <p class="product-name">Producto 3</p>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="producto3.jpg" alt="Producto 3">
+                <p class="product-name">Producto 3</p>
+                <p>$200</p>
+            </div>
+            <div class="product">
+                <img src="producto3.jpg" alt="Producto 3">
+                <p class="product-name">Producto 3</p>
+                <p>$200</p>
+            </div>
+            <!-- Añadir más productos según sea necesario -->
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>© 2024 Nuestra Empresa. Todos los derechos reservados.</p>
+        <p>Información de contacto: contacto@empresa.com | Tel: +1 (234) 567-890</p>
     </footer>
 </body>
 </html>
-<script>
-    $(document).ready(function(){
-        $('.btn').click(function(){
-            $('.items').toggleClass("show");
-            $('ul li').toggleClass("hide");
-        });
-        });
-</script>
-<script>
-    document.addEventListener( 'DOMContentLoaded', function () {
-        new Splide( '#image-slider' ).mount();
-    } );
-</script>
+
