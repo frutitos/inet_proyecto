@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 19, 2024 at 09:36 PM
+-- Generation Time: Aug 21, 2024 at 04:02 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -126,7 +126,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nombre`, `apellido`, `email`, `pass`, `direccion`, `telefono`) VALUES
 (2, 'hoal', 'adwdwa', 'hola@gmail.com', '$2y$10$DWBHhzSbvVgAYYLWS6jSluqi6y8Vqghs4YHIWcN.ZRjjWS8CjTN7q', 'dwad 1732', '11 7777-6666'),
-(4, 'Tomas', 'Masotti', 'masotopo@gmail.com', '$2y$10$6upSOQlt6S8IA6bnMj4hkey62jGk/513G5As5zSgvVyakCJd3nL5m', 'anasheix 7777', '11 0420-6969');
+(4, 'Tomas', 'Masotti', 'masotopo@gmail.com', '$2y$10$6upSOQlt6S8IA6bnMj4hkey62jGk/513G5As5zSgvVyakCJd3nL5m', 'anasheix 7777', '11 0420-6969'),
+(5, 'prueba', 'prueba', 'prueba@gmail.com', '$2y$10$4hfVefCRkm8WntY.H.AdD.1RWNu5RTFB6X3o76KKKB/kaCdn3.yeS', 'prueba 777', '11 12345678');
 
 --
 -- Indexes for dumped tables
@@ -212,7 +213,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
