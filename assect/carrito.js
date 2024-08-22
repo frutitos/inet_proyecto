@@ -129,7 +129,7 @@ async function pagarTodo() {
     }
     pagar(items)
     console.log(pagarTodo);
-    
+
 }
 
 function pagar(datos) {
@@ -154,7 +154,7 @@ function pagar(datos) {
             // Llamada a la función para mostrar el modal con los datos de pago
             showPaymentModal(data);
 
-            
+
             const reversedArr = datos.reverse();
 
             reversedArr.forEach(item => {
@@ -163,6 +163,34 @@ function pagar(datos) {
             });
 
             mostrarCarrito()
+
+            // Datos que se enviarán al API
+            const datosDelUsuarioProducto = {
+                usuario_id: id_user, // ID del usuario
+                producto_ids: reversedArr.map(x => x["id"]) // IDs de los productos a copiar
+            };
+
+            // Configurar la solicitud
+            fetch('api/guardarHistorica.php', {
+                method: 'POST', // Método de la solicitud
+                headers: {
+                    'Content-Type': 'application/json' // Tipo de contenido
+                },
+                body: JSON.stringify(datosDelUsuarioProducto) // Convertir el objeto data a JSON
+            })
+                .then(response => response.json()) // Convertir la respuesta a JSON
+                .then(result => {
+                    console.log(result); // Manejar la respuesta
+                    if (result.status === 'success') {
+                        alert('Productos copiados con éxito');
+                    } else {
+                        alert('Hubo un error al copiar los productos');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error); // Manejar errores
+                });
+
 
 
         })

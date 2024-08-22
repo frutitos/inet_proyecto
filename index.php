@@ -13,15 +13,12 @@
     <!-- Define el título de la página, que se mostrará en la pestaña del navegador -->
 
     <link rel="stylesheet" href="./assect/layout.css">
-<<<<<<< HEAD
     <!-- Enlaza una hoja de estilos externa para el diseño general de la página -->
 
     <link rel="stylesheet" href="./assect/carrusel.css">
     <!-- Enlaza otra hoja de estilos externa específica para el carrusel -->
 
-=======
     <link rel="stylesheet" href="./assect/carrusel.css">
->>>>>>> 285274fb993e1ca0bac8bd329d8c2ddf082d01c1
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Preconecta a Google Fonts para mejorar la velocidad de carga de las fuentes -->
 
@@ -46,7 +43,6 @@
         <?php
         require "lib/carrito.php"
         ?>
-<<<<<<< HEAD
         <!-- Carga el archivo "carrito.php" para manejar el carrito de compras -->
 
         <!-- Slideshow container -->
@@ -94,7 +90,6 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <!-- Indicadores de puntos que permiten al usuario seleccionar y navegar a una imagen específica del carrusel -->
         </div>
-=======
     <!-- Slideshow container -->
     <div class="slideshow-container">
 
@@ -129,7 +124,6 @@
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
     </div>
->>>>>>> 285274fb993e1ca0bac8bd329d8c2ddf082d01c1
     </main>
 
     <?php
@@ -144,7 +138,7 @@
     <!-- Enlaza un script no modular para cargar los iconos de Ionicons, para navegadores que no soportan módulos -->
 
     <script src="./assect/carrito.js"></script>
-<<<<<<< HEAD
+
     <!-- Enlaza un archivo JavaScript externo para manejar las funciones del carrito de compras -->
 
     <script src="./assect/carrusel.js"></script>
@@ -152,9 +146,9 @@
 
     <script src="./assect/menu.js"></script>
     <!-- Enlaza un archivo JavaScript externo para manejar el menú de navegación -->
-=======
+
     <script src="./assect/carrusel.js"></script>
->>>>>>> 285274fb993e1ca0bac8bd329d8c2ddf082d01c1
+
 </body>
 
 </html>

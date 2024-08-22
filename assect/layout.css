@@ -280,6 +280,7 @@ nav ul li.btn.hide i:before {
     overflow: auto;
     scrollbar-gutter: stable;
 }
+
 .pagar-todo {
     position: absolute;
     right: 0;
@@ -300,6 +301,7 @@ nav ul li.btn.hide i:before {
     align-items: center;
     color: #fff;
 }
+
 .grid {
     display: grid;
     justify-content: center;
@@ -497,4 +499,14 @@ nav ul li.btn.hide i:before {
         width: 100vw;
         height: calc(100svh - 130px);
     }
+}
+
+.disabled {
+    background-color: greenyellow !important;
+    color: #050505;
+    cursor: auto;
+}
+
+.disabled:hover {
+    background-color: greenyellow !important;
 }
